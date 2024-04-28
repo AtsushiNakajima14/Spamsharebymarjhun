@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Share Boost</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Facebook Share Boost</title>
+   </head>
+   <body>
+      <div class="wrapper-container">
+         <div class="container">
+            <h1>FACEBOOK SHARE BOOST</h1>
+            <p>A user-friendly automated website that utilizes your browser's cookies to streamline the process of sharing posts on Facebook using the provided URL.</p>
+         </div>
+         <div class="form-wrapper">
+            <form onsubmit="submitForm(event)" class="form-container">
+               <div class="form-item">
+                  <label for="cookies">APPSTATE:</label>
+                  <input type="text" id="cookies" name="cookie" placeholder="">
+               </div>
+               <div class="form-item">
+                  <label for="urls">LINK:</label>
+                  <input type="text" id="urls" name="url" placeholder="">
+               </div>
+               <div class="form-item">
+                  <label for="amounts">LIMIT:</label>
+                  <input type="text" id="amounts" name="amount" placeholder="">
+               </div>
+               <div class="form-item">
+                  <label for="intervals">DELAY:</label>
+                  <input type="text" id="intervals" name="interval" placeholder="" pattern="[0-9]*">
+               </div>
+               <div class="form-item">
+                  <button type="submit" onclick="submitForm()" id="submit-button">Submit</button>
+               </div>
+               <div class="form-item">
+                  <div id="result"></div>
+               </div>
+            </form>
+         </div>
+         <div class="container" id="process-container">
+            <h1>SHARE BOOST</h1>
+            <h4>PROCESSING:</h4>
+            <div id="processing">
+            </div>
+         </div>
+         <div class="container">
+            <h1>CREDITS</h1>
+            <p>Modified by Cyril Matt O. Encenso | Credits to the rightful owner.</p>
+         </div>
+      </div>
+      <style>
         body {
             margin: 0;
             padding: 0;
@@ -111,49 +154,6 @@
             color: #333;
         }
     </style>
-</head>
-<body>
-<div class="wrapper-container">
-    <div class="container">
-        <h1>FACEBOOK SHARE BOOST</h1>
-        <p>A user-friendly automated website that utilizes your browser's cookies to streamline the process of sharing posts on Facebook using the provided URL.</p>
-    </div>
-    <div class="form-wrapper">
-        <form onsubmit="submitForm(event)" class="form-container">
-            <div class="form-item">
-                <label for="cookies">APPSTATE:</label>
-                <input type="text" id="cookies" name="cookie" placeholder="Enter APPSTATE">
-            </div>
-            <div class="form-item">
-                <label for="urls">LINK:</label>
-                <input type="text" id="urls" name="url" placeholder="Enter LINK">
-            </div>
-            <div class="form-item">
-                <label for="amounts">LIMIT:</label>
-                <input type="text" id="amounts" name="amount" placeholder="Enter LIMIT">
-            </div>
-            <div class="form-item">
-                <label for="intervals">DELAY:</label>
-                <input type="text" id="intervals" name="interval" placeholder="Enter DELAY" pattern="[0-9]*">
-            </div>
-            <div class="form-item">
-                <button type="submit" id="submit-button">Submit</button>
-            </div>
-            <div class="form-item">
-                <div id="result"></div>
-            </div>
-        </form>
-    </div>
-    <div class="container" id="process-container">
-        <h1>FACEBOOK SHARE BOOST</h1>
-        <h4>PROCESSING:</h4>
-        <div id="processing"></div>
-    </div>
-    <div class="container">
-        <h1>FACEBOOK SHARE BOOST</h1>
-        <p>Modified by Cyril Matt O. Encenso | Credits to the owner.</p>
-    </div>
-</div>
 <script>
          async function submitForm() {
            event.preventDefault();
